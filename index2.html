@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro e Feedback</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+    background-color:black;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      background-color: black;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: black;
+    }
+
+    #feedback {
+      margin-top: 30px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    body.light-mode {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #darkModeToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PROJETO FRONTEND</h1>
+  </header>
+
+  <button onclick="increaseFontSize()">Aumentar Fonte</button>
+  <button onclick="decreaseFontSize()">Diminuir Fonte</button>
+
+  <div class="container">
+    <h2>Cadastro</h2>
+    <form id="registrationForm">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Telefone:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <button type="button" onclick="submitForm()">Enviar</button>
+    </form>
+
+    <div id="feedback">
+      <h2>Feedback</h2>
+      <label for="userFeedback">Feedbacks</label>
+      <textarea id="userFeedback" name="userFeedback"></textarea>
+      <button type="button" onclick="submitFeedback()">Enviar Feedback</button>
+    </div>
+  </div>
+
+  <script>
+    let currentFontSize = 16;
+
+function increaseFontSize() {
+  currentFontSize += 2;
+  updateFontSize();
+}
+
+function decreaseFontSize() {
+  currentFontSize -= 2;
+  updateFontSize();
+}
+
+function updateFontSize() {
+  document.body.style.fontSize = `${currentFontSize}px`;
+}
+</script>
+
+  <script>
+    function submitFeedback() {
+      alert("Feedback enviado com sucesso!");
+    }
+  </script>
+
+ <button id="darkModeToggle" onclick="toggleDarkMode()">Modo Escuro</button>
+
+<script>
+  body.classList.toggle('dark-mode');
+  body.classList.toggle(lig)
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+  body.classList.toggle(l);
+
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+  body.classList.toggle('light-mode');
+}
+}
+</script>
+
+<footer>
+  <p>&copy; 2023 Projeto Frontend.</p>
+</footer>
+
+</body>
+</html>

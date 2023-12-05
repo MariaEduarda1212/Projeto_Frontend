@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Página inicial</title>
+</head>
+<body>
+
+  <header>
+    <h1>PROJETO FRONTEND</h1>
+  </header>
+
+  <button onclick="increaseFontSize()">Aumentar Fonte</button>
+  <button onclick="decreaseFontSize()">Diminuir Fonte</button>
+
+  <section class="presentation">
+
+    <div class="Participante">
+      <img src="fotos/hadassa1" alt="Foto de Perfil" width="60" height="10">
+      <h2>Hadassa Campelo</h2>
+      <p><b>Competências:</b> Pensamento criativo e Proatividade </p>
+      <p><b>Experiências Profissionais:</b> Não possui </p>
+      <p><b>Escolaridade:</b> Cursando superior em Análise e desenvolvimento de sistemas </p>
+    </div>
+
+    <div class="Participante">
+      <img src="fotos/silmara" alt="Foto de Perfil" width="60" height="10">
+      <h2>Silmara Dayana</h2>
+      <p><b>Competências:</b> Trabalho em equipe, aprendizagem continua e adaptabilidade.</p>
+      <p><b>Experiências Profissionais:</b> Março 2021 – Dezembro 2021
+        ESTAGIÁRIA | Administração | Prefeitura da Cidade do Recife
+       no Preenchimento de Cadastro no Sistema de Informática, 
+       Auxiliar no Encaminhamento Remoto de Formulário de LTS á Servidores. </p>
+      <p><b>Escolaridade:</b> Cursando superior em Análise e desenvolvimento de sistemas  </p>
+    </div>
+
+      <div class="Participante">
+        <img src="fotos/eu" alt="Foto de Perfil" width="60" height="10">
+        <h2>Maria Eduarda</h2>
+        <p><b>Competências:</b> Proatividade e Criatividade </p>
+        <p><b>Experiências Profissionais:</b> Jovem Aprendiz - GGE </p>
+        <p><b>Escolaridade:</b> Cursando superior em Análise e desenvolvimento de sistemas </p>
+      </div>
+
+      <div class="Participante">
+        <img src="fotos/file.enc" alt="Foto de Perfil" width="60" height="10">
+        <h2>Ronald José</h2>
+        <p><b>Competências:</b> Alto confiança, Criatividade, Comunicação e Trabalho em equipe </p>
+        <p><b>Experiências Profissionais:</b> Não possui</p>
+        <p><b>Escolaridade:</b> Cursando superior em Análise e desenvolvimento de sistemas </p>
+      </div>
+
+      <div class="Participante">
+        <img src="fotos/384853640_1263806280971271_6755863702390848662_n.jpg" alt="Foto de Perfil" width="60" height="10">
+        <h2>Henrique Barbosa</h2>
+        <p><b>Competências:</b> Proatividade </p>
+        <p><b>Experiências Profissionais:</b> Auxiliar administrativo</p>
+        <p><b>Escolaridade:</b> Cursando superior em Análise e desenvolvimento de sistemas </p>
+      </div>
+    </table>
+  </section>
+
+  <script>
+    let currentFontSize = 16;
+
+function increaseFontSize() {
+  currentFontSize += 2;
+  updateFontSize();
+}
+
+function decreaseFontSize() {
+  currentFontSize -= 2;
+  updateFontSize();
+}
+
+function updateFontSize() {
+  document.body.style.fontSize = `${currentFontSize}px`;
+}
+</script>
+
+<button id="darkModeToggle" onclick="toggleDarkMode()">Modo Escuro</button>
+
+<script>
+  body.classList.toggle('dark-mode');
+  body.classList.toggle(lig)
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+  body.classList.toggle(l);
+
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+  body.classList.toggle('light-mode');
+}
+}
+</script>
+
+  <footer>
+    <p>&copy; 2023 Projeto Frontend.</p>
+  </footer>
+</body>
+</html>

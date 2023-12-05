@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Imagens</title>
+  <style>
+    
+    #animatedImage {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+ 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+    background-color:black;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    }
+
+    .card {
+      width: 300px;
+      margin: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: black;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05); 
+    }
+
+    .card img {
+      width: 80%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    body.light-mode {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #darkModeToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+  </style>
+</head>
+<body>
+    <header>
+        <h1>PROJETO FRONTEND</h1>
+      </header>
+
+      <button onclick="increaseFontSize()">Aumentar Fonte</button>
+  <button onclick="decreaseFontSize()">Diminuir Fonte</button>
+  
+  <div class="gallery">
+    <div class="card">
+        <img src="fotos/eu2.jpg" alt="Imagem 3">
+        <div class="content">
+          <h2>Maria Eduarda</h2>
+          <p>Gosta de moda</p>
+          <button>
+          <a href="https://api.whatsapp.com/send/?phone=%2B5581983546220&text&type=phone_number&app_absent=0">WhatsApp</a>
+            </button>
+            <button>
+          <a href="https://www.instagram.com/dudasnascimentoo/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Instagram</a>
+        </button>
+        </div>
+      </div>
+
+
+      
+      <div class="card">
+        <img src="fotos/ronald2.jpg" alt="Imagem 4">
+        <div class="content">
+          <h2>Ronald José</h2>
+          <p>Gosta de Artes e Coisas Relacionadas</p>
+          <button>
+            <a href="https://api.whatsapp.com/send/?phone=%2B558188701564&text&type=phone_number&app_absent=0">WhatsApp</a>
+          </button>
+          <button>
+            <a href="https://www.instagram.com/roneii_lx/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Instagram</a>
+        </button>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="fotos/henrique2.jpg" alt="Imagem 5">
+        <div class="content">
+          <h2>Henrique Barbosa</h2>
+          <p>Gosta de viajar</p>
+          <button>
+            <a href="https://wa.me/%3C81991554408%3E">WhatsApp</a>
+          </button>
+          <button>
+            <a href="https://instagram.com/_henrique_bp?igshid=M2RkZGJiMzhjOQ%3D%3D&utm_source=qr">Instagram</a>
+        </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="fotos/silmara2.jpg" alt="Imagem 5">
+        <div class="content">
+          <h2>Silmara Dayana</h2>
+          <p>Gosta de ir para show</p>
+          <button>
+            <a href="https://api.whatsapp.com/send/?phone=%2B5581988748443&text&type=phone_number&app_absent=0">WhatsApp</a>
+          </button>
+          <button>
+            <a href="https://instagram.com/silmara_day?igshid=OGQ5ZDc2ODk2ZA==">Instagram</a>
+        </button>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="fotos/hadassa2.jpg" alt="Imagem 5">
+        <div class="content">
+          <h2>Hadassa Campelo</h2>
+          <p>Trancista profissional</p>
+          <button>
+            <a href="https://api.whatsapp.com/send/?phone=%2B5581983546220&text&type=phone_number&app_absent=0">WhatsApp</a>
+          </button>
+          <button>
+            <a href="https://www.instagram.com/campelo_s7lva/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Instagram</a>
+        </button>
+        </div>
+      </div>
+  
+  
+  </div>
+
+  <script>
+    let currentFontSize = 16;
+
+function increaseFontSize() {
+  currentFontSize += 2;
+  updateFontSize();
+}
+
+function decreaseFontSize() {
+  currentFontSize -= 2;
+  updateFontSize();
+}
+
+function updateFontSize() {
+  document.body.style.fontSize = `${currentFontSize}px`;
+}
+</script>
+  
+  <button id="darkModeToggle" onclick="toggleDarkMode()">Modo Escuro</button>
+
+  <script>
+      body.classList.toggle('dark-mode');
+      body.classList.toggle(lig)
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      body.classList.toggle(l);
+
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+    }
+}
+  </script>
+
+  <footer>
+    <p>&copy; 2023 Projeto Frontend.</p>
+  </footer>
+
+</body>
+</html>
